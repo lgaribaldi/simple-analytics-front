@@ -5,6 +5,7 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import IconButton from '@material-ui/core/IconButton';
 import InfoIcon from '@material-ui/icons/Info';
+import moment from 'moment'
 
 const itemStyle = {
   'width': '33%'
@@ -15,7 +16,6 @@ export default class Project extends Component {
   render() {
     const {project, listkey, selectProject} = this.props;
     const {name, lastUpdate, _id } = project;
-    const lastUpdateDt = new Date(lastUpdate);
     
     return (
       <ListItem
@@ -23,7 +23,7 @@ export default class Project extends Component {
         divider>         
         <ListItemText style={itemStyle} primary={name} />
         <ListItemText style={itemStyle} primary={_id} />
-        <ListItemText style={itemStyle} primary={lastUpdateDt.toString()} />                 
+        <ListItemText style={itemStyle} primary={moment(lastUpdate).calendar()} />                 
         <IconButton aria-label="Info" onClick={selectProject(project)}
           style={project.events && project.events.length ? {} : {"visibility":"hidden"}}>
         <InfoIcon />

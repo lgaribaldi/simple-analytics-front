@@ -5,6 +5,7 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import IconButton from '@material-ui/core/IconButton';
 import ArrowBack from '@material-ui/icons/ArrowBack';
+import moment from 'moment'
 
 const styles = {
     'width': '60%',
@@ -35,7 +36,7 @@ class EventsList extends Component {
               <ListItem
                 key={i + 1}>         
                 <ListItemText style={ { 'width' : '15%' } } primary={mapEvent.ip}/>
-                <ListItemText style={ { 'width' : '40%' } } primary={new Date(mapEvent.dateTime).toString()}/>            
+                <ListItemText style={ { 'width' : '40%' } } primary={moment(mapEvent.dateTime).calendar()}/>            
                 <ListItemText style={ { 'width' : '55%' } } primary={mapEvent.description}/>            
               </ListItem>)
             })
