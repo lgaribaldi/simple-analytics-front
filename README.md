@@ -1,7 +1,10 @@
 # simple-analytics-front
 
-This project contains a frontend for 'https://github.com/lgaribaldi/simple-analytics-server'.<br>
-It is not production ready yet, it expects the server to be running on http://localhost:3030
+> This project contains a frontend for 'https://github.com/lgaribaldi/simple-analytics-server'.<br>
+
+## Discalimer
+
+The project is not production ready yet, it expects the server to be running on http://localhost:3030
 
 ## Available Scripts
 
