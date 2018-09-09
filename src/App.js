@@ -60,7 +60,6 @@ class App extends Component {
 
     const { projects, user, feathersapp, selectedProject } = this.state;
 
-    console.log(selectedProject)
     return (
       <div className="App">
         <header className="App-header">
