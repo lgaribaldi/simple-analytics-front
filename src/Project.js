@@ -23,10 +23,11 @@ export default class Project extends Component {
         divider>         
         <ListItemText style={itemStyle} primary={name} />
         <ListItemText style={itemStyle} primary={_id} />
-        <ListItemText style={itemStyle} primary={lastUpdateDt.toString()} />         
-        <IconButton aria-label="Info" onClick={selectProject(project)}>
-          <InfoIcon />
-        </IconButton>
+        <ListItemText style={itemStyle} primary={lastUpdateDt.toString()} />                 
+        <IconButton aria-label="Info" onClick={selectProject(project)}
+          style={project.events && project.events.length ? {} : {"visibility":"hidden"}}>
+        <InfoIcon />
+        </IconButton>        
       </ListItem>      
     )
   }

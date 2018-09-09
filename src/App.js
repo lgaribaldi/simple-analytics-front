@@ -8,7 +8,7 @@ import Typography from '@material-ui/core/Typography';
 import 'typeface-roboto';
 
 const btnStyle = {
-  "margin-top": "20px"
+  "marginTop": "20px"
 };
 
 const feathersapp = feathers();
